@@ -7,7 +7,7 @@ import {
 } from "@/lib/constants";
 
 const Home = () => {
-    const scriptUrl = `https://s3.tradingview.com/external-embedding/embed-widget-`;
+    const scriptUrl = `https://s3.tradingview.com/external-embedding/embed`;
 
     return (
         <div className="home-wrapper">
