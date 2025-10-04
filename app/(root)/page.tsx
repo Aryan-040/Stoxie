@@ -11,9 +11,9 @@ const Home = () => {
 
     return (
         <div className="home-wrapper">
-          <div className="dashboard-header">
-            <h1 className="dashboard-title">Trading Dashboard</h1>
-            <p className="dashboard-subtitle">Monitor markets, track performance, and make informed investment decisions</p>
+          <div className="dashboard-header flex flex-col items-center justify-center text-center py-8 mb-6">
+            <h1 className="dashboard-title text-3xl font-bold mb-2">Trading Dashboard</h1>
+            <p className="dashboard-subtitle text-lg max-w-2xl mx-auto">Monitor markets, track performance, and make informed investment decisions</p>
           </div>
           <section className="grid w-full home-section">
               <div className="md:col-span-1 xl:col-span-1">
