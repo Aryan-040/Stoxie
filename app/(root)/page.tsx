@@ -7,7 +7,7 @@ import {
 } from "@/lib/constants";
 
 const Home = () => {
-    const scriptUrl = `https://s3.tradingview.com/external-embedding/embed`;
+    const scriptBase = `https://s3.tradingview.com/external-embedding/`;
 
     return (
         <div className="home-wrapper">
@@ -19,7 +19,7 @@ const Home = () => {
               <div className="md:col-span-1 xl:col-span-1">
                   <TradingViewWidget
                     title="Market Overview"
-                    scriptUrl={`${scriptUrl}market-overview.js`}
+                    scriptUrl={`${scriptBase}embed-widget-market-overview.js`}
                     config={MARKET_OVERVIEW_WIDGET_CONFIG}
                     className="custom-chart"
                     height={600}
@@ -28,7 +28,7 @@ const Home = () => {
               <div className="md:col-span-1 xl:col-span-2">
                   <TradingViewWidget
                       title="Stock Heatmap"
-                      scriptUrl={`${scriptUrl}stock-heatmap.js`}
+                      scriptUrl={`${scriptBase}embed-widget-stock-heatmap.js`}
                       config={HEATMAP_WIDGET_CONFIG}
                       height={600}
                   />
@@ -38,7 +38,7 @@ const Home = () => {
                 <div className="h-full md:col-span-1 xl:col-span-1">
                     <TradingViewWidget
                         title="Market News"
-                        scriptUrl={`${scriptUrl}timeline.js`}
+                        scriptUrl={`${scriptBase}embed-widget-timeline.js`}
                         config={TOP_STORIES_WIDGET_CONFIG}
                         height={600}
                     />
@@ -46,7 +46,7 @@ const Home = () => {
                 <div className="h-full md:col-span-1 xl:col-span-2">
                     <TradingViewWidget
                         title="Market Data"
-                        scriptUrl={`${scriptUrl}market-quotes.js`}
+                        scriptUrl={`${scriptBase}embed-widget-market-quotes.js`}
                         config={MARKET_DATA_WIDGET_CONFIG}
                         height={600}
                     />
