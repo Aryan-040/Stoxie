@@ -75,6 +75,8 @@ declare global {
         open?: boolean;
         setOpen?: (open: boolean) => void;
         renderAs?: 'button' | 'text';
+        label?: string;
+        initialStocks: StockWithWatchlistStatus[];
         buttonLabel?: string;
         buttonVariant?: 'primary' | 'secondary';
         className?: string;
@@ -240,6 +242,11 @@ declare global {
         type: string;
     };
 
+    type FinnhubSearchResponse = {
+        count?: number;
+        result: FinnhubSearchResult[];
+    };
+
     type FormInputProps = {
         name: string;
         label: string;
@@ -272,6 +279,15 @@ declare global {
         text: string;
         linkText: string;
         href: string;
+    };
+
+    type WatchlistButtonProps = {
+        symbol: string;
+        company: string;
+        isInWatchlist?: boolean;
+        showTrashIcon?: boolean;
+        type?: 'button' | 'icon';
+        onWatchlistChange?: (symbol: string, added: boolean) => void;
     };
 
 }

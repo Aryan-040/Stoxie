@@ -272,6 +272,12 @@
   .watchlist-remove {
     @apply bg-red-500! hover:bg-red-500! text-gray-900!
   }
+  .watchlist-goto {
+    @apply bg-blue-500! hover:bg-blue-600! text-white! flex items-center justify-center
+  }
+  .watchlist-remove-btn {
+    @apply p-1.5 rounded-full bg-gray-700 hover:bg-red-500 text-gray-400 hover:text-white transition-colors
+  }
   .watchlist-empty-container {
     @apply container gap-8 flex-col items-center md:mt-10 p-6 text-center;
   }
