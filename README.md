@@ -1,7 +1,5 @@
 # 📈 Stoxie
 
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
-![Version](https://img.shields.io/badge/version-0.1.0-green.svg)
 ![Next.js](https://img.shields.io/badge/Next.js-15.5.4-black)
 ![MongoDB](https://img.shields.io/badge/MongoDB-6.20.0-green)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind-4.0-blue)
@@ -86,15 +84,7 @@ yarn dev
 
 Navigate to [http://localhost:3000](http://localhost:3000) to see the application.
 
-## 📸 Screenshots
 
-*Coming soon*
-
-<!-- Add your screenshots here. For example:
-![Dashboard](./public/assets/images/screenshots/dashboard.png)
-![Watchlist](./public/assets/images/screenshots/watchlist.png)
-![Stock Details](./public/assets/images/screenshots/stock-details.png)
--->
 
 ## 📁 Project Structure
 
@@ -133,9 +123,6 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## 📄 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## 🙏 Acknowledgments
 
@@ -147,4 +134,3 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ---
 
-Built with ❤️ by [Your Name]
