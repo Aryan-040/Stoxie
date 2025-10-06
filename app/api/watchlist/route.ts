@@ -1,5 +1,3 @@
-'use server'
-
 import { NextResponse } from 'next/server'
 import { auth } from '@/lib/better-auth/auth'
 import { headers } from 'next/headers'
