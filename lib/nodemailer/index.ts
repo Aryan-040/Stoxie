@@ -4,7 +4,7 @@ import {WELCOME_EMAIL_TEMPLATE, NEWS_SUMMARY_EMAIL_TEMPLATE} from "@/lib/nodemai
 export const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-        user: process.env.NODEMAILER_EMAIL!,
+        user: process.env.NODEMAILER_EMAIl!,
         pass: process.env.NODEMAILER_PASSWORD!,
     }
 })
