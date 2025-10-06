@@ -1,36 +1,150 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📈 Stoxie
 
-## Getting Started
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![Version](https://img.shields.io/badge/version-0.1.0-green.svg)
+![Next.js](https://img.shields.io/badge/Next.js-15.5.4-black)
+![MongoDB](https://img.shields.io/badge/MongoDB-6.20.0-green)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind-4.0-blue)
 
-First, run the development server:
+**Stoxie** is a modern stock tracking web application that helps users monitor their favorite stocks, manage personalized watchlists, and receive daily stock news via email. Built with Next.js and MongoDB, Stoxie provides real-time market data and personalized stock alerts to keep you informed about your investments.
+
+## ✨ Key Features
+
+- **📋 Watchlist Management** - Add, remove, and organize your favorite stocks in a personalized watchlist
+- **📰 Daily Stock News** - Receive curated stock news and market updates via email
+- **💹 Real-time Prices** - Track stock prices and market changes in real-time
+- **📬 Personalized Email Alerts** - Get notified about significant price movements for stocks you care about
+- **📊 Watchlist Overview** - View comprehensive data about your watchlist stocks including price, change, market cap, and P/E ratio
+
+## 🛠️ Tech Stack
+
+- **Frontend**: [Next.js](https://nextjs.org/), [React](https://reactjs.org/), [Tailwind CSS](https://tailwindcss.com/)
+- **Backend**: [Node.js](https://nodejs.org/), [Next.js API Routes](https://nextjs.org/docs/api-routes/introduction)
+- **Database**: [MongoDB](https://www.mongodb.com/), [Mongoose](https://mongoosejs.com/)
+- **Authentication**: [Better Auth](https://www.npmjs.com/package/better-auth)
+- **Email**: [Nodemailer](https://nodemailer.com/)
+- **Background Jobs**: [Inngest](https://www.inngest.com/)
+- **UI Components**: [Radix UI](https://www.radix-ui.com/), [Shadcn UI](https://ui.shadcn.com/)
+- **Stock Data**: [Finnhub API](https://finnhub.io/)
+
+## 🚀 Installation and Setup
+
+### Prerequisites
+
+- Node.js (v18 or higher)
+- npm or yarn
+- MongoDB database
+
+### Steps
+
+1. **Clone the repository**
+
+```bash
+git clone https://github.com/yourusername/stoxie.git
+cd stoxie
+```
+
+2. **Install dependencies**
+
+```bash
+npm install
+# or
+yarn install
+```
+
+3. **Set up environment variables**
+
+Create a `.env` file in the root directory with the following variables:
+
+```
+# MongoDB
+MONGODB_URI=your_mongodb_connection_string
+
+# Authentication
+AUTH_SECRET=your_auth_secret_key
+
+# Finnhub API
+NEXT_PUBLIC_FINNHUB_API_KEY=your_finnhub_api_key
+
+# Email (Nodemailer)
+EMAIL_SERVER_USER=your_email_address
+EMAIL_SERVER_PASSWORD=your_email_password
+EMAIL_SERVER_HOST=smtp.example.com
+EMAIL_SERVER_PORT=587
+EMAIL_FROM=noreply@yourdomain.com
+```
+
+4. **Run the development server**
 
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+5. **Open your browser**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Navigate to [http://localhost:3000](http://localhost:3000) to see the application.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📸 Screenshots
 
-## Learn More
+*Coming soon*
 
-To learn more about Next.js, take a look at the following resources:
+<!-- Add your screenshots here. For example:
+![Dashboard](./public/assets/images/screenshots/dashboard.png)
+![Watchlist](./public/assets/images/screenshots/watchlist.png)
+![Stock Details](./public/assets/images/screenshots/stock-details.png)
+-->
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📁 Project Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+stoxie/
+├── app/                  # Next.js app directory
+│   ├── (auth)/           # Authentication routes
+│   ├── (root)/           # Main application routes
+│   ├── api/              # API routes
+│   └── globals.css       # Global styles
+├── components/           # React components
+│   ├── forms/            # Form components
+│   ├── ui/               # UI components
+│   └── ...
+├── database/             # Database models and connection
+├── hooks/                # Custom React hooks
+├── lib/                  # Utility functions and actions
+│   ├── actions/          # Server actions
+│   ├── better-auth/      # Authentication setup
+│   ├── inngest/          # Background jobs
+│   └── nodemailer/       # Email templates
+├── middleware/           # Next.js middleware
+├── public/               # Static assets
+│   └── assets/
+├── types/                # TypeScript type definitions
+└── ...
+```
 
-## Deploy on Vercel
+## 🤝 Contributing
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## 🙏 Acknowledgments
+
+- [Next.js](https://nextjs.org/) for the amazing React framework
+- [MongoDB](https://www.mongodb.com/) for the database
+- [Tailwind CSS](https://tailwindcss.com/) for styling
+- [Finnhub](https://finnhub.io/) for stock market data
+- [Shadcn UI](https://ui.shadcn.com/) for beautiful UI components
+
+---
+
+Built with ❤️ by [Your Name]
