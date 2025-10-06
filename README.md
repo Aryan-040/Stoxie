@@ -22,7 +22,7 @@
 - **Authentication**: [Better Auth](https://www.npmjs.com/package/better-auth)
 - **Email**: [Nodemailer](https://nodemailer.com/)
 - **Background Jobs**: [Inngest](https://www.inngest.com/)
-- **UI Components**: [Radix UI](https://www.radix-ui.com/), [Shadcn UI](https://ui.shadcn.com/)
+- **UI Components**: [Shadcn UI](https://ui.shadcn.com/)
 - **Stock Data**: [Finnhub API](https://finnhub.io/)
 
 ## 🚀 Installation and Setup
