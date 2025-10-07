@@ -8,11 +8,26 @@ import Link from "next/link";
 import {searchStocks} from "@/lib/actions/finnhub.actions";
 import {useDebounce} from "@/hooks/useDebounce";
 
+type Stock = {
+  symbol: string;
+  description: string;
+  displaySymbol: string;
+  type: string;
+  name?: string;
+  exchange?: string;
+};
+
+type SearchCommandProps = {
+  renderAs?: 'button' | 'text';
+  label?: string;
+  initialStocks: Stock[];
+};
+
 export default function SearchCommand({ renderAs = 'button', label = 'Add stock', initialStocks }: SearchCommandProps) {
   const [open, setOpen] = useState(false)
   const [searchTerm, setSearchTerm] = useState("")
   const [loading, setLoading] = useState(false)
-  const [stocks, setStocks] = useState<StockWithWatchlistStatus[]>(initialStocks);
+  const [stocks, setStocks] = useState<Stock[]>(initialStocks);
 
   const isSearchMode = !!searchTerm.trim();
   const displayStocks = isSearchMode ? stocks : stocks?.slice(0, 10);
@@ -99,7 +114,7 @@ export default function SearchCommand({ renderAs = 'button', label = 'Add stock'
                           {stock.symbol} | {stock.exchange } | {stock.type}
                         </div>
                       </div>
-                    {/*<Star />*/}
+                   
                     </Link>
                   </li>
               ))}

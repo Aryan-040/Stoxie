@@ -122,9 +122,9 @@ export const WELCOME_EMAIL_TEMPLATE = `<!DOCTYPE html>
                             
                             <!-- Feature List -->
                             <ul class="mobile-text dark-text-secondary" style="margin: 0 0 30px 0; padding-left: 20px; font-size: 16px; line-height: 1.6; color: #CCDADC;">
-                                <li style="margin-bottom: 12px;">Set up your watchlist to follow your favorite stocks</li>
                                 <li style="margin-bottom: 12px;">Create price and volume alerts so you never miss a move</li>
                                 <li style="margin-bottom: 12px;">Explore the dashboard for trends and the latest market news</li>
+                                <li style="margin-bottom: 12px;">Stay updated with daily market insights delivered to your inbox</li>
                             </ul>
                             
                             <!-- Additional Text -->
@@ -1067,7 +1067,7 @@ export const INACTIVE_USER_REMINDER_EMAIL_TEMPLATE = `<!DOCTYPE html>
                             
                             <!-- Encouragement Message -->
                             <p class="mobile-text dark-text-secondary" style="margin: 0 0 40px 0; font-size: 16px; line-height: 1.6; color: #CCDADC;">
-                                Your watchlists are still active and ready to help you stay on top of your investments. Don't let market opportunities pass you by!
+                                Stay updated with our daily market insights to help you make informed investment decisions. Don't let market opportunities pass you by!
                             </p>
                             
                             <!-- CTA Button -->

@@ -64,11 +64,10 @@ declare global {
         image: string;
     };
 
-    type WatchlistNewsProps = {
-        watchlistSymbols?: string[]; // Array of stock symbols to fetch news for
-        watchlistStocks?: StockWithData[]; // Array of watchlist stocks with full data
-        articlesPerStock?: number; // Number of articles per stock
-        initialNews?: MarketNewsArticle[]; // Initial news data
+    type NewsProps = {
+    articlesPerStock?: number; // Number of articles per stock
+    initialNews?: MarketNewsArticle[]; // Initial news data
+}
     };
 
     type SearchCommandProps = {
@@ -192,9 +191,12 @@ declare global {
         type: string;
     };
 
-    type StockWithWatchlistStatus = Stock & {
-        isInWatchlist: boolean;
-    };
+    type Stock = {
+  symbol: string;
+  description: string;
+  displaySymbol: string;
+  type: string;
+};
 
     type UserForNewsEmail = {
         id: string;
@@ -281,15 +283,8 @@ declare global {
         href: string;
     };
 
-    type WatchlistButtonProps = {
-        symbol: string;
-        company: string;
-        isInWatchlist?: boolean;
-        showTrashIcon?: boolean;
-        type?: 'button' | 'icon';
-        onWatchlistChange?: (symbol: string, added: boolean) => void;
-    };
 
-}
+
+
 
 export {};

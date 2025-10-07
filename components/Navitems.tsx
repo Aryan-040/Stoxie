@@ -4,7 +4,14 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import SearchCommand from "./SearchCommand"
 
-const Navitems = ({initialStocks}: { initialStocks: StockWithWatchlistStatus[]})  => {
+type Stock = {
+  symbol: string;
+  description: string;
+  displaySymbol: string;
+  type: string;
+};
+
+const Navitems = ({initialStocks}: { initialStocks: Stock[]})  => {
   const pathname = usePathname()
 
   const isActive = (path:string) => {

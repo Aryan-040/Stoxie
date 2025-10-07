@@ -15,7 +15,14 @@ import {LogOut} from "lucide-react";
 import NavItems from "@/components/Navitems";
 import {signOut} from "@/lib/actions/auth.actions";
 
-const UserDropdown = ({ user, initialStocks }: {user: User, initialStocks: StockWithWatchlistStatus[]}) => {
+type Stock = {
+  symbol: string;
+  description: string;
+  displaySymbol: string;
+  type: string;
+};
+
+const UserDropdown = ({ user, initialStocks }: {user: User, initialStocks: Stock[]}) => {
     const router = useRouter();
 
     const getInitials = (name: string) => {
