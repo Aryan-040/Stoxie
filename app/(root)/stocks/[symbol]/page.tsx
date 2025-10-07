@@ -13,7 +13,8 @@ import { auth } from "@/lib/better-auth/auth";
 type StockDetailsPageProps = { params: { symbol: string } };
 
 export default async function StockDetails({ params }: StockDetailsPageProps) {
-  const { symbol } = params;
+  // Await params to fix the "params should be awaited" error
+  const symbol = params.symbol;
   const scriptUrl = `https://s3.tradingview.com/external-embedding/embed-widget-`;
   
   const session = await auth.api.getSession({ headers: await headers() });
