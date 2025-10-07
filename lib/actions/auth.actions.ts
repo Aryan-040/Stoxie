@@ -24,7 +24,10 @@ export const signUpWithEmail = async ({ email, password, fullName, country, inve
 
 export const signOut = async () => {
     try {
-        await auth.api.signOut({ headers: await headers() });
+        // Get headers inside the function, not at module scope
+        const headersList = await headers();
+        await auth.api.signOut({ headers: headersList });
+        return { success: true }
     } catch (e) {
         console.log('Sign out failed', e)
         return { success: false, error: 'Sign out failed' }
