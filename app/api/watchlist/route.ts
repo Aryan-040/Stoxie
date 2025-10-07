@@ -1,4 +1,4 @@
-'use server'
+
 
 import { NextResponse } from 'next/server'
 import { auth } from '@/lib/better-auth/auth'
@@ -20,7 +20,8 @@ export async function POST(req: Request) {
   if (!userId) return NextResponse.json({ success: false }, { status: 401 })
 
   const body = await req.json().catch(() => ({}))
-  const { action, symbol, company } = body || {}
+  console.log(body)
+  const { action, symbol, company } = body
 
   if (action === 'add') {
     const res = await addToWatchlist(userId, symbol, company)
