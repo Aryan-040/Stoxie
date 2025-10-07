@@ -15,8 +15,8 @@ export const getAuth = async () => {
 
     authInstance = betterAuth({
         database: mongodbAdapter(db as any),
-        secret: process.env.BETTER_AUTH_SECRET,
-        baseURL: process.env.BETTER_AUTH_URL,
+        secret: process.env.BETTER_AUTH_SECRET || 'fallback-secret-key-for-development',
+        baseURL: process.env.BETTER_AUTH_URL || process.env.VERCEL_URL || 'http://localhost:3000',
         emailAndPassword: {
             enabled: true,
             disableSignUp: false,
