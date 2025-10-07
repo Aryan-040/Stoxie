@@ -10,7 +10,7 @@ export const revalidate = 0
 
 //  Optional safe guard for Vercel builds
 if (process.env.NODE_ENV === 'production' && process.env.VERCEL === '1') {
-  console.log('⚙️ Skipping /api/watchlist during build phase')
+  console.log('Skipping /api/watchlist during build phase')
 }
 
 //  GET handler
