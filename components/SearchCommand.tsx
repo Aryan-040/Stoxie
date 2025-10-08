@@ -106,7 +106,7 @@ export default function SearchCommand({ renderAs = 'button', label = 'Add stock'
                         className="search-item-link"
                     >
                       <TrendingUp className="h-4 w-4 text-gray-500" />
-                      <div  className="flex-1">
+                      <div className="flex-1">
                         <div className="search-item-name">
                           {stock.name}
                         </div>
@@ -114,7 +114,6 @@ export default function SearchCommand({ renderAs = 'button', label = 'Add stock'
                           {stock.symbol} | {stock.exchange } | {stock.type}
                         </div>
                       </div>
-                   
                     </Link>
                   </li>
               ))}
