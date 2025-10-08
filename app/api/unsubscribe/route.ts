@@ -18,6 +18,10 @@ export async function GET(request: NextRequest) {
     // Connect to database
     await connectToDatabase();
     const db = mongoose.connection.db;
+    
+    if (!db) {
+      throw new Error("Failed to connect to database");
+    }
 
     // Update user preferences to opt out of news emails
     const result = await db.collection("users").updateOne(
