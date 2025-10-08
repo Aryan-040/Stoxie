@@ -66,9 +66,6 @@ export default function WatchlistPage() {
           <p className="empty-description">
             Search for stocks and add them to your watchlist to keep track of your favorite investments.
           </p>
-          <Link href="/search" className="btn-primary">
-            Search Stocks
-          </Link>
         </div>
       </div>
     );
